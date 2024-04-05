@@ -70,29 +70,28 @@ function checkUppercaseString(str) {
 }
 checkUppercaseString("MInh");
 
-// Buoi 2
+// bai tap number
 
-function max2Number(arr) {
-  let newArr = arr.sort();
-  let result;
-  for (i = 0; i < newArr.length - 1; i++) {
-    if (newArr[i] !== newArr[i + 1]) {
-      result = newArr[i + 1];
-      break;
-    }
+//bai 2
+
+function totalInt(a, b) {
+  let total = 0;
+  for (++a; a < b; a++) {
+    total += a;
   }
-  console.log(result);
-}
-max2Number([1, 3, 4, 1, 3, 1, 2, 5]);
-
-//object
-var user = {
-  name: "Minh",
-  age: 24,
-};
-
-function getKey(obj) {
-  console.log(obj.name);
+  return total;
 }
 
-getKey(user);
+console.log(totalInt(3, 8));
+
+//bai 6
+
+function sortInt(n) {
+  let arr = String(n).split("").sort();
+  if (arr[0] == 0) {
+    arr.shift();
+  }
+  return parseInt(arr.join(""));
+}
+
+console.log(sortInt(70020981));
